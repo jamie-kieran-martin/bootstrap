@@ -1,0 +1,22 @@
+
+
+.pointer {
+  cursor: pointer;
+}
+
+nav, footer {
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+nav .btn.no-outline {
+    outline:none;
+    border: none;
+}
+
+.btn {
+  fill: #000000;
+}
+
+.btn:hover{
+  fill: #ffffff;
+}
