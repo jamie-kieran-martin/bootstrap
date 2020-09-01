@@ -21,63 +21,52 @@
   <nav class="navbar navbar-expand-lg navbar-light outline-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Auction</a>
+          </li>
+        </ul>
+
+        <form class="d-flex">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search..." aria-label="Search button"
+              aria-describedby="button-search">
+            <button class="btn btn-outline-dark" type="button" id="button-search">Search</button>
+          </div>
+        </form>
+
+        <ul class="navbar-nav ml-2 mb-2 mb-lg-0">
+          <li class="nav-item dropdown dropleft">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-expanded="false">
-              Categories
+              Profile
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Bids</a></li>
+              <li><a class="dropdown-item" href="#">Items</a></li>
+              <li><a class="dropdown-item" href="#">Watchlist</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
             </ul>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-dark no-outline" type="submit">Search</button>
-        </form>
 
-        <ul class="navbar-nav ml-3">
-          <div class="btn-group">
-            <div class="btn-group dropleft" role="group">
-              <button type="button" class="btn btn-outline-dark no-outline dropdown-toggle dropdown-toggle-split"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only">Toggle Dropleft</span>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Bids</a>
-                <a class="dropdown-item" href="#">Items</a>
-                <a class="dropdown-item" href="#">Watchlist</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Logout</a>
-              </div>
-            </div>
-            <button type="button" class="btn btn-outline-dark no-outline">
-              <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-circle"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
-                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
-              </svg>
-            </button>
-          </div>
-        </ul>
       </div>
-    </div>
   </nav>
 
   <main class="py-5">
@@ -91,53 +80,112 @@
         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </section>
 
-    <section class="container py-5">
-      <h2 class="mb-4">Popular Items</h2>
+    <section class="container pt-5">
 
-      <section class="row">
-        <article class="col-sm py-2 px-5">
-          <div class="card w-100">
-            <img src="img/mona-lisa.jpg" class="card-img-top object-cover" alt="Mona Lisa">
-            <div class="card-body">
-              <h5 class="card-title">Mona Lisa</h5>
-              <h6 class="card-title">AUD $5,000,000</h6>
-              <p class="card-text">The Mona Lisa is a half-length portrait painting by the Italian artist Leonardo da
-                Vinci. It is considered an archetypal masterpiece of the Italian Renaissance.
-              </p>
-              <a href="#" class="float-right btn btn-dark">View Item</a>
-            </div>
+      <nav class="navbar my-2">
+        <h2 class="my-auto">Popular Items</h2>
+
+        <form class="d-flex">
+          <select class="form-select mx-3" data-size="5" aria-label="Default select example">
+            <option selected>Filter by category...</option>
+            <option value="1">Acrylic</option>
+            <option value="2">Digital</option>
+            <option value="2">Enamels</option>
+            <option value="3">Encaustic</option>
+            <option value="4">Fresco secco</option>
+            <option value="5">Gouache</option>
+            <option value="6">Ink wash / Literati</option>
+            <option value="7">Oil</option>
+            <option value="8">Pastel</option>
+            <option value="9">Sand</option>
+            <option value="10">Spray</option>
+            <option value="11">Tempera</option>
+            <option value="12">Watercolor</option>
+          </select>
+
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+
+    </section>
+
+    <section class="row m-0">
+      <article class="col-md-6 col-lg-2 offset-lg-1 p-2">
+        <div class="card w-100 paper">
+          <img src="img/mona-lisa.jpg" class="card-img-top paper object-cover" alt="Mona Lisa">
+          <div class="card-body">
+            <h5 class="card-title">Mona Lisa</h5>
+            <h6 class="card-title">AUD $5,000,000</h6>
+            <p class="small card-text">The Mona Lisa is a half-length portrait painting by the Italian artist Leonardo
+              da
+              Vinci...
+            </p>
+            <a href="#" class="float-right btn btn-dark">View Item</a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="col-sm py-2 px-5">
-          <div class="card w-100">
-            <img src="img/mona-lisa.jpg" class="card-img-top object-cover" alt="Mona Lisa">
-            <div class="card-body">
-              <h5 class="card-title">Mona Lisa</h5>
-              <h6 class="card-title">AUD $5,000,000</h6>
-              <p class="card-text">The Mona Lisa is a half-length portrait painting by the Italian artist Leonardo da
-                Vinci. It is considered an archetypal masterpiece of the Italian Renaissance.
-              </p>
-              <a href="#" class="float-right btn btn-dark">View Item</a>
-            </div>
+      <article class="col-md-6 col-lg-2 p-2">
+        <div class="card w-100 paper">
+          <img src="img/mona-lisa.jpg" class="card-img-top paper object-cover" alt="Mona Lisa">
+          <div class="card-body">
+            <h5 class="card-title">Mona Lisa</h5>
+            <h6 class="card-title">AUD $5,000,000</h6>
+            <p class="small card-text">The Mona Lisa is a half-length portrait painting by the Italian artist Leonardo
+              da
+              Vinci...
+            </p>
+            <a href="#" class="float-right btn btn-dark">View Item</a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="col-sm py-2 px-5">
-          <div class="card w-100">
-            <img src="img/mona-lisa.jpg" class="card-img-top object-cover" alt="Mona Lisa">
-            <div class="card-body">
-              <h5 class="card-title">Mona Lisa</h5>
-              <h6 class="card-title">AUD $5,000,000</h6>
-              <p class="card-text">The Mona Lisa is a half-length portrait painting by the Italian artist Leonardo da
-                Vinci. It is considered an archetypal masterpiece of the Italian Renaissance.
-              </p>
-              <a href="#" class="float-right btn btn-dark">View Item</a>
-            </div>
+      <article class="col-md-6 col-lg-2 p-2">
+        <div class="card w-100 paper">
+          <img src="img/mona-lisa.jpg" class="card-img-top paper object-cover" alt="Mona Lisa">
+          <div class="card-body">
+            <h5 class="card-title">Mona Lisa</h5>
+            <h6 class="card-title">AUD $5,000,000</h6>
+            <p class="small card-text">The Mona Lisa is a half-length portrait painting by the Italian artist Leonardo
+              da
+              Vinci...
+            </p>
+            <a href="#" class="float-right btn btn-dark">View Item</a>
           </div>
-        </article>
+        </div>
+      </article>
 
-      </section>
+      <article class="col-md-6 col-lg-2 p-2">
+        <div class="card w-100 paper">
+          <img src="img/mona-lisa.jpg" class="card-img-top paper object-cover" alt="Mona Lisa">
+          <div class="card-body">
+            <h5 class="card-title">Mona Lisa</h5>
+            <h6 class="card-title">AUD $5,000,000</h6>
+            <p class="small card-text">The Mona Lisa is a half-length portrait painting by the Italian artist Leonardo
+              da
+              Vinci...
+            </p>
+            <a href="#" class="float-right btn btn-dark">View Item</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="col-md-6 col-lg-2 p-2">
+        <div class="card w-100 paper">
+          <img src="img/mona-lisa.jpg" class="card-img-top paper object-cover" alt="Mona Lisa">
+          <div class="card-body">
+            <h5 class="card-title">Mona Lisa</h5>
+            <h6 class="card-title">AUD $5,000,000</h6>
+            <p class="small card-text">The Mona Lisa is a half-length portrait painting by the Italian artist Leonardo
+              da
+              Vinci...
+            </p>
+            <a href="#" class="float-right btn btn-dark">View Item</a>
+          </div>
+        </div>
+      </article>
+
     </section>
 
 
