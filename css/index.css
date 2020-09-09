@@ -92,10 +92,6 @@ nav.outline-dark, footer {
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-.object-cover {
-  object-fit: cover;
-}
-
 .gutter {
   margin-bottom: 1rem !important;
 }
@@ -110,6 +106,14 @@ nav.outline-dark, footer {
 
 .rounded-pill {
   padding: 0.5rem;
+}
+
+.card {
+  height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
 }
 
 .object-scale-down {
